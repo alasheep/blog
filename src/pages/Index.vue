@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <main class="section">
+    <main class="section hero is-light">
       <div class="content">
     <!-- <div class="content">
       <div class="columns is-centered">

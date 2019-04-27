@@ -1,13 +1,15 @@
 <template>
   <Layout>
     <div class="content">
-      <h1 class="title is-2">Recent Articles</h1>
-      <p>
-        I like to write about anything thta I am currently working or something new that interests me. If you would like me to write about something or be a guest blogger on your blog please reach out to me on
+      <h1 class="title is-2">Programming</h1>
+      <!-- <p>
+        개발과 관련한 관심사를 정리한 글입니다. 문의사항 있으시면 트위터 계정으로 연락주세요.
         <a
-          href="https://twitter.com/therealdanvega"
+          href="https://twitter.com/alasheep"
         >Twitter</a>.
-      </p>
+      </p> -->
+      <!-- <div class="empty"> -->
+      </div>
       <div class="articles">
         <div v-for="post in $page.posts.edges" :key="post.node.id" class="article content">
           <h2 class="title is-4">
@@ -68,6 +70,9 @@ export default {
 </script>
 
 <style>
+.empty {
+  height: 10px;
+}
 .articles {
   margin: 20px 0;
 }

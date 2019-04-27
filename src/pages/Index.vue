@@ -1,7 +1,14 @@
 <template>
   <Layout>
-    <main class="section hero is-light">
+    <!-- <main class="section"> -->
       <div class="content">
+        <h1 class="title is-2">40대 개발자의 끄적끄적</h1>
+      <p>
+        개발 및 관심사를 정리한 글입니다. 문의사항 있으시면 트위터 계정으로 연락주세요.
+        <a
+          href="https://twitter.com/alasheep"
+        >Twitter</a>.
+      </p>
     <!-- <div class="content">
       <div class="columns is-centered">
         <div class="column is-two-thirds">
@@ -29,7 +36,7 @@
             <PostCard v-for="edge in $page.recentPosts.edges" :key="edge.node.id" :post="edge.node"/>
         </div>
       </div>
-    </main>
+    <!-- </main> -->
   </Layout>
 </template>
 

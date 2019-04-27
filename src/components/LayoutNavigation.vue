@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <g-image src="../assets/img/andy-avatar-navigation.png" alt="Dan Vega"/>
+        <g-image src="../assets/img/andy-avatar-navigation.png" alt="Dan Vega"/>Home
       </a>
       <a
         role="button"

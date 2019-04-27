@@ -17,12 +17,12 @@ export default {
   data() {
     return {
       accounts: [
-        { name: "twitter", href: "http://twitter.com/therealdanvega" },
-        { name: "github", href: "https://github.com/danvega/" },
-        { name: "youtube", href: "http://www.youtube.com/therealdanvega" },
-        { name: "reddit", href: "https://www.reddit.com/u/therealdanvega" },
-        { name: "instagram", href: "https://www.instagram.com/thedanvega/" },
-        { name: "linkedin", href: "https://www.linkedin.com/in/danvega/" }
+        // { name: "twitter", href: "http://twitter.com/therealdanvega" },
+        { name: "github", href: "https://github.com/alasheep/" },
+        // { name: "youtube", href: "http://www.youtube.com/therealdanvega" },
+        // { name: "reddit", href: "https://www.reddit.com/u/therealdanvega" },
+        // { name: "instagram", href: "https://www.instagram.com/thedanvega/" },
+        // { name: "linkedin", href: "https://www.linkedin.com/in/danvega/" }
       ]
     };
   },

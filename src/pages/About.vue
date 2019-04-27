@@ -4,15 +4,17 @@
       <div class="columns is-centered">
         <div class="column is-two-thirds">
           <h1 class="title is-2">Hi, I’m Soongil Kim.</h1>
-          <p><h1 class="title is-2">你好, 我叫金淳吉.</p></h1>
+          <p><h1 class="title is-2">你好, 我叫金淳吉.</h1></p>
+          <br>
           <p>안녕하세요. 김순길 입니다.</p>
           <p>40대 개발자로, 초심으로 돌아가기 위해 블로그 개설했습니다.</p>
           <p>Embedded SW, Mobile App(Android/iOS) 개발했었고,</p>
-          <p>현재는 Backend(Spring) 을 개발하고 있습니다.</p>
-          <p>한달에 1번을 글을 올리도록 노력하겠습니다.^^</p>
+          <p>현재는 Backend(Spring, SpringBoot) 서버를 개발하고 있습니다.</p>
+          <p>한달에 1번은 글을 올리도록 노력하겠습니다.^^</p>
+          <p>좋은 하루 되세요 ~~</p>
         </div>
         <div class="column right-side">
-          <g-image src="../assets/img/andy_2.png" class="avatar" alt="Dan Vega Avatar"/>
+          <g-image src="../assets/img/andy-avatar.png" class="avatar" alt="Dan Vega Avatar"/>
         </div>
       </div>
     </div>

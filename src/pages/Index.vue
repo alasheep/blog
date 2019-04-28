@@ -2,7 +2,7 @@
   <Layout>
     <!-- <main class="section"> -->
       <div class="content">
-        <h1 class="title is-2">40대 개발자의 끄적끄적</h1>
+        <h1 class="title is-2">개발자의 끄적끄적</h1>
       <p>
         개발 및 관심사를 정리한 글입니다. 문의사항 있으시면 트위터 계정으로 연락주세요.
         <a

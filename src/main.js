@@ -17,7 +17,7 @@ export default function (Vue, {router, head, isClient}) {
 
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Oswald'
+    href: 'https://fonts.googleapis.com/css?family=Arial'
   })
   
 }

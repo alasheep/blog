@@ -19,9 +19,9 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <!-- <g-link class="navbar-item is-uppercase" :to="{ name: 'home' }">Home</g-link> -->
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'blog' }">Progamming</g-link>
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'diary' }">Diary</g-link>
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'about' }">About</g-link>
+        <g-link class="navbar-item" :to="{ name: 'blog' }">Progamming</g-link>
+        <g-link class="navbar-item" :to="{ name: 'diary' }">Diary</g-link>
+        <g-link class="navbar-item" :to="{ name: 'about' }">About</g-link>
       </div>
     </div>
     <social-links/>
@@ -56,12 +56,12 @@ export default {
 <style>
 .brand {
   margin-left: 5px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .navbar-item {
-  font-family: "Oswald", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 </style>

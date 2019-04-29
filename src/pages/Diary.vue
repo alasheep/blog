@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <h1 class="title is-1">Speaking</h1>
+    <h1 class="title is-1">Diary</h1>
     <div class="content">
-      <p>This is just a few of the events I have spoken at in the past. I have an <a href="https://github.com/cfaddict/danvega-me/issues/3">open issue</a> to update this page with a lot more detail.</p>
-      <ul>
+      <p>개인적인 관심사를 적어내려가는 공간입니다.</p>
+      <!-- <ul>
           <li>
               <a href="https://www.meetup.com/vuecle/events/257002211/" target="_blank">
               02/07/2019: VueCLE - Getting Started with Vue CLI 3
@@ -19,7 +19,7 @@
             11/05/2018: Cleveland Women in Tech Conference
         </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </Layout>
 </template>

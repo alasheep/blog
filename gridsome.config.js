@@ -8,7 +8,7 @@ module.exports = {
   siteName: "Dan Vega",
   siteUrl: "https://www.danvega.dev",
   siteDescription: "Person blog of Dan Vega",
-  icon: "src/img/andy-favicon.png",
+  icon: "src/img/a-favicon.png",
   plugins: [{
       use: '@gridsome/source-filesystem',
       options: {
@@ -76,7 +76,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-133826656-1'
+        id: 'UA-139153758-1'
       }
     }
   ]

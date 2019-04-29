@@ -8,7 +8,7 @@ module.exports = {
   siteName: "Dan Vega",
   siteUrl: "https://www.danvega.dev",
   siteDescription: "Person blog of Dan Vega",
-  icon: "src/img/a-favicon.png",
+  icon: "src/img/alasheep-favicon.png",
   plugins: [{
       use: '@gridsome/source-filesystem',
       options: {

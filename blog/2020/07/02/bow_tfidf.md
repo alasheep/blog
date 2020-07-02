@@ -24,19 +24,19 @@ Natural Language Processing (NLP) 로,
 
 #### 1. 아는 단어의 명단(Vocabulary)을 만든다.
 
-![vocabulary](/Users/alasheep/dev/vue/blog/blog/2020/07/02/vocabulary.png)
+![vocabulary](./vocabulary.png)
 
 #### 2. 벡터 변환 (one hot vector)
 
-![onehotvector](/Users/alasheep/dev/vue/blog/blog/2020/07/02/onehotvector.png)
+![onehotvector](./onehotvector.png)
 
 #### 3. 여러개의 단어 vector 를 합하여 문장으로 표현 (bag-of-words, BOW vector)
 
-![bow_vector](/Users/alasheep/dev/vue/blog/blog/2020/07/02/bow_vector.png)
+![bow_vector](./bow_vector.png)
 
 #### 4. BoW vector : Nx1 매트릭스에 vocabulary 단어 빈도수 표시
 
-![bow_representation](/Users/alasheep/dev/vue/blog/blog/2020/07/02/bow_representation.jpeg)
+![bow_representation](./bow_representation.jpeg)
 
 
 

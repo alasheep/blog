@@ -22,25 +22,25 @@ Natural Language Processing (NLP) 로,
 
 > 단어는 어떻게 숫자로 표현될 수 있나?
 
-#### 1. 아는 단어의 명단(Vocabulary)을 만든다.
+### 1. 아는 단어의 명단(Vocabulary)을 만든다.
 
 ![vocabulary](./vocabulary.png)
 
-#### 2. 벡터 변환 (one hot vector)
+### 2. 벡터 변환 (one hot vector)
 
 ![onehotvector](./onehotvector.png)
 
-#### 3. 여러개의 단어 vector 를 합하여 문장으로 표현 (bag-of-words, BOW vector)
+### 3. 여러개의 단어 vector 를 합하여 문장으로 표현 (bag-of-words, BOW vector)
 
 ![bow_vector](./bow_vector.png)
 
-#### 4. BoW vector : Nx1 매트릭스에 vocabulary 단어 빈도수 표시
+### 4. BoW vector : Nx1 매트릭스에 vocabulary 단어 빈도수 표시
 
 ![bow_representation](./bow_representation.jpeg)
 
 
 
-#### 5. Bow vector 문서 유사도
+### 5. Bow vector 문서 유사도
 
 - d1 : the best Italian restaurant enjoy the best pasta
 - d2 : American restaurant enjoy the best hamburger
@@ -61,7 +61,7 @@ Natural Language Processing (NLP) 로,
 | D3   | Korean restaurant enjoy the best bibimbap        | 0.65                      |
 | D4   | the best the best American restaurant            | 1                         |
 
-```
+```python
 from sklearn.feature_extraction.text import CountVectorizer  
 import numpy as np  
   
@@ -89,9 +89,7 @@ for i in range(bow2_vector.shape[0]):
  
 ```
 
-
-
-```
+```reStructuredText
 < 출력결과 >  
 d 0 - d 3 cosine 유사도 : 0.8215838362577491  
 d 1 - d 3 cosine 유사도 : 0.7745966692414834  
@@ -101,9 +99,7 @@ d 3 - d 3 cosine 유사도 : 0.9999999999999998
 
 
 
-
-
-#### 6. TF-IDF
+### 6. TF-IDF vector 문서 유사도
 
 > 중요도가 낮은 단어는 패널티(penalty)를 부과하자!
 
@@ -117,7 +113,7 @@ d 3 - d 3 cosine 유사도 : 0.9999999999999998
 | Korean restaurant enjoy the best bibimbap        | [0, 0, 0.02, 0, 0, 0, 0, 0, 0.1, 0.1]     |             0             |
 | the best the best American restaurant            | [0, 0, 0, 0, 0, 0.05, 0, 0, 0]            |             1             |
 
-```
+```python
 from sklearn.feature_extraction.text import TfidfVectorizer  
 import numpy as np  
   
@@ -138,9 +134,7 @@ for i in range(bow_vector.shape[0]):
   print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[3]))  
 ```
 
-
-
-```
+```reStructuredText
 < 출력결과 >  
 d 0 - d 3 cosine 유사도 : 0.6343595536423782  
 d 1 - d 3 cosine 유사도 : 0.6706654455485332  
@@ -148,3 +142,40 @@ d 2 - d 3 cosine 유사도 : 0.4325954627077376
 d 3 - d 3 cosine 유사도 : 1.0  
 ```
 
+
+
+### 7. BOW , TF-IDF 결함
+
+- Vocabulary 기준 단어만 비교하지, 유의어, 단어순서는 비교 못함
+
+  ```python
+  from sklearn.feature_extraction.text import TfidfVectorizer
+  import numpy as np
+  
+  text = ['American restaurant menu',
+          'American restaurant menu hamberger pizza',
+          'hamberger pizza']
+  tfidf_vectorizer = TfidfVectorizer()
+  
+  bow_vector = tfidf_vectorizer.fit_transform(text)
+  
+  for i in range(bow_vector.shape[0]):
+    print("d",i,"- d 2 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[2]))
+  ```
+
+  ```reStructuredText
+  < 출력결과 >
+  d 0 - d 2 cosine 유사도 : 0.0
+  d 1 - d 2 cosine 유사도 : 0.632455532033676
+  d 2 - d 2 cosine 유사도 : 1.0000000000000002
+  ```
+
+  
+
+- 결함 개선 방안
+
+  LSA (Latent Semantic Analysis)
+
+  Word Embeddings (Word2Vec, Glove)
+
+  ConceptNet

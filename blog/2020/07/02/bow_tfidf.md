@@ -62,40 +62,44 @@ Natural Language Processing (NLP) 로,
 | D4   | the best the best American restaurant            | 1                         |
 
 ```
-from sklearn.feature_extraction.text import CountVectorizer
-import numpy as np
-
-# 학습데이터
-training_documents = 
-["the best Italian restaurant enjoy the best pasta", 
- "American restaurant enjoy the best hamburger", 
- "Korean restaurant enjoy the best bibimbap",
- "the best the best American restaurant"]
-
-# CountVectorizer 객체
-bow_vectorizer = CountVectorizer()
-bow_vector = bow_vectorizer.fit_transform(training_documents)
-#print(bow2_vector.toarray())
-
-# cosine 유사도 함수
-def cosine_similarity(vector1, vector2):
- vector1 = np.array(vector1)
- vector2 = np.array(vector2)
- return np.dot(vector1, vector2) / (np.sqrt(np.sum(vector1**2)) * np.sqrt(np.sum(vector2**2)))
+from sklearn.feature_extraction.text import CountVectorizer  
+import numpy as np  
+  
+# 학습데이터  
+training_documents =  
+["the best Italian restaurant enjoy the best pasta",  
+ "American restaurant enjoy the best hamburger",  
+ "Korean restaurant enjoy the best bibimbap",  
+ "the best the best American restaurant"]  
+  
+# CountVectorizer 객체  
+bow_vectorizer = CountVectorizer()  
+bow_vector = bow_vectorizer.fit_transform(training_documents)  
+#print(bow2_vector.toarray())  
+  
+# cosine 유사도 함수  
+def cosine_similarity(vector1, vector2):  
+ vector1 = np.array(vector1)  
+ vector2 = np.array(vector2)  
+ return np.dot(vector1, vector2) / (np.sqrt(np.sum(vector1**2)) * np.sqrt(np.sum(vector2**2)))  
+  
+# d0,d1,d2,d3 와 d3 vector 간 cosine 유사도 측정  
+for i in range(bow2_vector.shape[0]):  
+  print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[3]))
  
-# d0,d1,d2,d3 와 d3 vector 간 cosine 유사도 측정
-for i in range(bow2_vector.shape[0]):
-  print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow2_vector.toarray()[i], bow2_vector.toarray()[3]))
- 
 ```
 
+
+
 ```
-< 출력결과 >
-d 0 - d 3 cosine 유사도 : 0.8215838362577491
-d 1 - d 3 cosine 유사도 : 0.7745966692414834
-d 2 - d 3 cosine 유사도 : 0.6454972243679029
-d 3 - d 3 cosine 유사도 : 0.9999999999999998
+< 출력결과 >  
+d 0 - d 3 cosine 유사도 : 0.8215838362577491  
+d 1 - d 3 cosine 유사도 : 0.7745966692414834  
+d 2 - d 3 cosine 유사도 : 0.6454972243679029  
+d 3 - d 3 cosine 유사도 : 0.9999999999999998  
 ```
+
+
 
 
 
@@ -112,4 +116,35 @@ d 3 - d 3 cosine 유사도 : 0.9999999999999998
 | American restaurant enjoy the best hamburger     | [0, 0, 0.02, 0, 0, 0, 0, 0.05, 0.1, 0, 0] |            0.5            |
 | Korean restaurant enjoy the best bibimbap        | [0, 0, 0.02, 0, 0, 0, 0, 0, 0.1, 0.1]     |             0             |
 | the best the best American restaurant            | [0, 0, 0, 0, 0, 0.05, 0, 0, 0]            |             1             |
+
+```
+from sklearn.feature_extraction.text import TfidfVectorizer  
+import numpy as np  
+  
+text = ['the best Italian restaurant enjoy the best pasta',  
+        'American restaurant enjoy the best hamburger',  
+        'Korean restaurant enjoy the best bibimbap',  
+        'the best the best American restaurant']  
+tfidf_vectorizer = TfidfVectorizer()  
+  
+def cosine_similarity(vector1, vector2):  
+ vector1 = np.array(vector1)  
+ vector2 = np.array(vector2)  
+ return np.dot(vector1, vector2) / (np.sqrt(np.sum(vector1**2)) * np.sqrt(np.sum(vector2**2)))  
+  
+bow_vector = tfidf_vectorizer.fit_transform(text)  
+  
+for i in range(bow_vector.shape[0]):  
+  print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[3]))  
+```
+
+
+
+```
+< 출력결과 >  
+d 0 - d 3 cosine 유사도 : 0.6343595536423782  
+d 1 - d 3 cosine 유사도 : 0.6706654455485332  
+d 2 - d 3 cosine 유사도 : 0.4325954627077376  
+d 3 - d 3 cosine 유사도 : 1.0  
+```
 

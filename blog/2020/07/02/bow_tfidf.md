@@ -1,11 +1,11 @@
 ---
 slug: bow_tfidf
-title: "AI학습(bow&tf-idf)"
+title: "AI (bow&tf-idf)"
 published: true
 date: 2020-07-02T21:00
 tags: Random
 excerpt: "BOW 와 TF-IDF"
-cover: ./bow_tfidf_cover.jpeg
+cover: ./bow_tfidf_cover1.jpeg
 ---
 
 ## NLP란?
@@ -40,5 +40,76 @@ Natural Language Processing (NLP) 로,
 
 
 
-#### 5. Bow vector with python
+#### 5. Bow vector 문서 유사도
+
+- d1 : the best Italian restaurant enjoy the best pasta
+- d2 : American restaurant enjoy the best hamburger
+- d3 : Korean restaurant enjoy the best bibimbap
+- d4 : the best the best American restaurant
+
+|      | American | best | bibimbap | enjoy | hamburger | italian | korean | pasta | restaurant | the  |
+| ---- | :------: | :--: | :------: | :---: | :-------: | :-----: | :----: | :---: | ---------- | ---- |
+| d1   |    0     |  2   |    0     |   1   |     0     |    1    |   0    |   1   | 1          | 2    |
+| d2   |    1     |  1   |    0     |   1   |     1     |    0    |   0    |   0   | 1          | 1    |
+| d3   |    0     |  1   |    1     |   1   |     0     |    0    |   1    |   0   | 1          | 1    |
+| d4   |    1     |  2   |    0     |   0   |     0     |    0    |   0    |   0   | 1          | 2    |
+
+|      | Document                                         | Cosine similarity with d4 |
+| ---- | ------------------------------------------------ | ------------------------- |
+| D1   | the best Italian restaurant enjoy the best pasta | **0.82**                  |
+| D2   | American restaurant enjoy the best hamburger     | 0.77                      |
+| D3   | Korean restaurant enjoy the best bibimbap        | 0.65                      |
+| D4   | the best the best American restaurant            | 1                         |
+
+```
+from sklearn.feature_extraction.text import CountVectorizer
+import numpy as np
+
+# 학습데이터
+training_documents = 
+["the best Italian restaurant enjoy the best pasta", 
+ "American restaurant enjoy the best hamburger", 
+ "Korean restaurant enjoy the best bibimbap",
+ "the best the best American restaurant"]
+
+# CountVectorizer 객체
+bow_vectorizer = CountVectorizer()
+bow_vector = bow_vectorizer.fit_transform(training_documents)
+#print(bow2_vector.toarray())
+
+# cosine 유사도 함수
+def cosine_similarity(vector1, vector2):
+ vector1 = np.array(vector1)
+ vector2 = np.array(vector2)
+ return np.dot(vector1, vector2) / (np.sqrt(np.sum(vector1**2)) * np.sqrt(np.sum(vector2**2)))
+ 
+# d0,d1,d2,d3 와 d3 vector 간 cosine 유사도 측정
+for i in range(bow2_vector.shape[0]):
+  print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow2_vector.toarray()[i], bow2_vector.toarray()[3]))
+ 
+```
+
+```
+< 출력결과 >
+d 0 - d 3 cosine 유사도 : 0.8215838362577491
+d 1 - d 3 cosine 유사도 : 0.7745966692414834
+d 2 - d 3 cosine 유사도 : 0.6454972243679029
+d 3 - d 3 cosine 유사도 : 0.9999999999999998
+```
+
+
+
+#### 6. TF-IDF
+
+> 중요도가 낮은 단어는 패널티(penalty)를 부과하자!
+
+- TF : Term Frequency
+- IDF : Inverse Document Frequency
+
+| Document                                         | TF-IDF Bag og Words                       | Cosine similarity with d4 |
+| ------------------------------------------------ | ----------------------------------------- | :-----------------------: |
+| the best Italian restaurant enjoy the best pasta | [0.075, 0, 0.016, 0,0, 0.075, 0, 0, 0, 0] |             0             |
+| American restaurant enjoy the best hamburger     | [0, 0, 0.02, 0, 0, 0, 0, 0.05, 0.1, 0, 0] |            0.5            |
+| Korean restaurant enjoy the best bibimbap        | [0, 0, 0.02, 0, 0, 0, 0, 0, 0.1, 0.1]     |             0             |
+| the best the best American restaurant            | [0, 0, 0, 0, 0, 0.05, 0, 0, 0]            |             1             |
 

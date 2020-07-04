@@ -19,9 +19,10 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <!-- <g-link class="navbar-item is-uppercase" :to="{ name: 'home' }">Home</g-link> -->
-        <g-link class="navbar-item" :to="{ name: 'blog' }">Progamming</g-link>
-        <g-link class="navbar-item" :to="{ name: 'diary' }">Diary</g-link>
-        <g-link class="navbar-item" :to="{ name: 'about' }">About</g-link>
+        <!--<g-link class="navbar-item" :to="{ name: 'blog' }">Progamming</g-link>-->
+        <g-link class="navbar-item" to="/blog">Progamming</g-link>
+        <g-link class="navbar-item" to="/diary">Diary</g-link>
+        <g-link class="navbar-item" to="/about">About</g-link>
       </div>
     </div>
     <social-links/>

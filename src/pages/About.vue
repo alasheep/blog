@@ -3,11 +3,12 @@
     <div class="content">
       <div class="columns is-centered">
         <div class="column is-two-thirds">
-          <h1 class="title is-2">Have a nice day.!!!</h1>
+          <h1 class="title is-2">Have a nice day..</h1>
           <p></p>
           <p>안녕하세요. 40대 개발자 입니다..</p>
-          <p>Embedded SW(DTV Device Driver), Mobile App(Android/iOS) 개발했었고,</p>
-          <p>현재는 Backend(SpringBoot) 서버를 개발하고 있습니다.</p>
+          <p>Embedded SW(DTV Device Driver),</p>
+          <p>Mobile Application (Android/iOS) 개발했었고,</p>
+          <p>현재는 Backend(Spring) 서버를 개발하고 있습니다.</p>
           <p>좋아하는건 책읽기, 여행, 가족 입니다.</p>
           <p>자주 글 올리도록 노력하겠습니다. ^.^</p>
         </div>

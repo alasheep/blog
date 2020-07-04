@@ -1,4 +1,3 @@
----
 slug: bow_tfidf
 title: "AI (bow&tf-idf)"
 published: true
@@ -6,7 +5,6 @@ date: 2020-07-02T21:00
 tags: Random
 excerpt: "BOW 와 TF-IDF"
 cover: ./bow_tfidf_cover1.jpeg
----
 
 ## NLP란?
 
@@ -86,16 +84,16 @@ def cosine_similarity(vector1, vector2):
 # d0,d1,d2,d3 와 d3 vector 간 cosine 유사도 측정  
 for i in range(bow2_vector.shape[0]):  
   print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[3]))
- 
+   
 ```
 
-```reStructuredText
+<pre>
 < 출력결과 >  
 d 0 - d 3 cosine 유사도 : 0.8215838362577491  
 d 1 - d 3 cosine 유사도 : 0.7745966692414834  
 d 2 - d 3 cosine 유사도 : 0.6454972243679029  
-d 3 - d 3 cosine 유사도 : 0.9999999999999998  
-```
+d 3 - d 3 cosine 유사도 : 0.9999999999999998   
+</pre>
 
 
 
@@ -134,13 +132,13 @@ for i in range(bow_vector.shape[0]):
   print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[3]))  
 ```
 
-```reStructuredText
+<pre>
 < 출력결과 >  
 d 0 - d 3 cosine 유사도 : 0.6343595536423782  
 d 1 - d 3 cosine 유사도 : 0.6706654455485332  
 d 2 - d 3 cosine 유사도 : 0.4325954627077376  
-d 3 - d 3 cosine 유사도 : 1.0  
-```
+d 3 - d 3 cosine 유사도 : 1.0    
+</pre>
 
 
 
@@ -163,12 +161,12 @@ d 3 - d 3 cosine 유사도 : 1.0
     print("d",i,"- d 2 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[2]))
   ```
 
-  ```reStructuredText
+  <pre>
   < 출력결과 >
   d 0 - d 2 cosine 유사도 : 0.0
   d 1 - d 2 cosine 유사도 : 0.632455532033676
   d 2 - d 2 cosine 유사도 : 1.0000000000000002
-  ```
+  </pre>
 
   
 

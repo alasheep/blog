@@ -26,7 +26,7 @@ cover: ./bow_tfidf_cover1.jpeg
 >
 > 손글씨 숫자 이미지 분류
 
-![classification_cat](/Users/alasheep/dev/vue/blog/blog/2020/07/10/classification_cat.gif)
+![classification_cat](./classification_cat.gif)
 
 ### (2) Regression (회귀)
 
@@ -34,7 +34,7 @@ cover: ./bow_tfidf_cover1.jpeg
 >
 > 웹사이트 방문 수에 따른 구매 비율
 
-![regression_cost](/Users/alasheep/dev/vue/blog/blog/2020/07/10/regression_cost.png)
+![regression_cost](./regression_cost.png)
 
 ### (3) Forecast (예측) : Regression + Time
 
@@ -44,7 +44,7 @@ cover: ./bow_tfidf_cover1.jpeg
 
 
 
-![forecast_taepoong](/Users/alasheep/dev/vue/blog/blog/2020/07/10/forecast_taepoong.png)
+![forecast_taepoong](./forecast_taepoong.png)
 
 
 
@@ -54,7 +54,7 @@ cover: ./bow_tfidf_cover1.jpeg
 >
 > 지진 감지
 
-![anomaly_detextion](/Users/alasheep/dev/vue/blog/blog/2020/07/10/anomaly_detextion.png)
+![anomaly_detextion](./anomaly_detextion.png)
 
 
 
@@ -66,7 +66,7 @@ cover: ./bow_tfidf_cover1.jpeg
 >
 > SNS 의 친구 추천
 
-![clustering](/Users/alasheep/dev/vue/blog/blog/2020/07/10/clustering.png)
+![clustering](./clustering.png)
 
 
 
@@ -76,7 +76,7 @@ cover: ./bow_tfidf_cover1.jpeg
 >
 > 자율주행
 
-![reinforcement_learning](/Users/alasheep/dev/vue/blog/blog/2020/07/10/reinforcement_learning.png)
+![reinforcement_learning](./reinforcement_learning.png)
 
 ### 2. 머신러닝 알고리즘
 

@@ -8,15 +8,15 @@ cover: ./bow_tfidf_cover1.jpeg
 
 ## Machine Learning 종류 및 알고리즘
 
-> Superviced Learing : Classification, Regression, Forecast
->
-> Unsuperviced Learning : Anormaly Detection, Clustering
->
-> Reinforement Learning
-
 
 
 ### 1. 머신러닝 종류
+
+| 지도학습                             | 비지도학습                     | 강화학습              |
+| ------------------------------------ | ------------------------------ | --------------------- |
+| Classification, Regression, Forecast | Anormaly Detection, Clustering | Reinforement Learning |
+
+
 
 ### (1) Classification (분류)
 
@@ -82,7 +82,7 @@ cover: ./bow_tfidf_cover1.jpeg
 
 | 지도학습                                                     | 비지도학습                          | 강화학습                                               |
 | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------ |
-| - SVM<br />- Logistic Regression<br />- Linear Regression<br />- Decision Tree<br />- Random Forest<br />- kNN | - K-means<br />- PCA<br />- Apriori | - Monte-Carlo<br />- Q-learning<br />- Markov Decision |
+| - SVM<br />- Logistic Regression<br />- Linear Regression<br />- Decision Tree<br />- Random Forest<br />- kNN<br />- Neural networks | - K-means<br />- PCA<br />- Apriori | - Monte-Carlo<br />- Q-learning<br />- Markov Decision |
 
 - 추천사이트
 

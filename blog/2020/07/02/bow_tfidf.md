@@ -1,10 +1,15 @@
-slug: bow_tfidf
+---
+slug: bow-tfidf
 title: "AI (bow&tf-idf)"
 published: true
-date: 2020-07-02T21:00
+date: 2020-07-02T15:00:07-18:00
 tags: Random
-excerpt: "BOW 와 TF-IDF"
+excerpt: "블로그를 만들었습니다. 뭔가 동기 부여가 필요하던 차에 회사 교육을 받던 중 갑자기 Feel 이 와서 하루 투자해서 만들었네요."
 cover: ./bow_tfidf_cover1.jpeg
+
+---
+
+
 
 ## NLP란?
 

@@ -87,7 +87,7 @@ def cosine_similarity(vector1, vector2):
  return np.dot(vector1, vector2) / (np.sqrt(np.sum(vector1**2)) * np.sqrt(np.sum(vector2**2)))  
   
 # d0,d1,d2,d3 와 d3 vector 간 cosine 유사도 측정  
-for i in range(bow2_vector.shape[0]):  
+for i in range(bow_vector.shape[0]):  
   print("d",i,"- d 3 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[3]))
    
 ```
@@ -162,6 +162,11 @@ d 3 - d 3 cosine 유사도 : 1.0
   
   bow_vector = tfidf_vectorizer.fit_transform(text)
   
+  def cosine_similarity(vector1, vector2):  
+   vector1 = np.array(vector1)  
+   vector2 = np.array(vector2)  
+   return np.dot(vector1, vector2) / (np.sqrt(np.sum(vector1**2)) * np.sqrt(np.sum(vector2**2)))  
+  
   for i in range(bow_vector.shape[0]):
     print("d",i,"- d 2 cosine 유사도 :",cosine_similarity(bow_vector.toarray()[i], bow_vector.toarray()[2]))
   ```
@@ -172,7 +177,6 @@ d 3 - d 3 cosine 유사도 : 1.0
   d 1 - d 2 cosine 유사도 : 0.632455532033676
   d 2 - d 2 cosine 유사도 : 1.0000000000000002
   </pre>
-
   
 
 - 결함 개선 방안

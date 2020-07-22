@@ -1,3 +1,4 @@
+---
 slug: ml_classification
 title: "AI (머신러닝 분류)"
 published: true
@@ -5,6 +6,10 @@ date: 2020-07-10T21:00
 tags: Random
 excerpt: "BOW 와 TF-IDF"
 cover: ./bow_tfidf_cover1.jpeg
+
+---
+
+
 
 ## Machine Learning 종류 및 알고리즘
 

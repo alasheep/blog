@@ -15,7 +15,7 @@ cover: ./pexels-photo-169573-1024x683.jpeg
 
 > 단어간의 관계가 Vector 화 되있다면 풀수 있는 문제 
 
-
+<p>
 
 ## Word Embedding (word vector)
 
@@ -39,6 +39,8 @@ One-hot vectors 는 bow 의 단어 frequency 를 숫자로만 표현하여 차�
 
 "King - Man + Woman" 같은 문제도 풀수 있다.
 
+<p>
+
 
 
 ## Word Embedding 알고리즘 종류
@@ -55,6 +57,8 @@ One-hot vectors 는 bow 의 단어 frequency 를 숫자로만 표현하여 차�
 
    * CBOW : 주변 단어들을 모두 합쳐서 이를 바탕으로 타겟 단어를 맞추는 방법
    * Skipgram : 타겟 단어를 보고 주변 단어를 맞추기(CBOW와는 반대방식 느낌!)
+
+<p>
 
 
 
@@ -133,15 +137,19 @@ print(model_result)
 
 
 
+<p>
+
+## 
+
 ## Word2Vec 공간을 consine distance 로 explore 하기
 
 텐서플로우에 포함된 [embedding projector](https://projector.tensorflow.org/) 툴 통한 explore
 
 
 
+<p>
 
-
-> ### King - Woman + Man 의 정답은?
+## King - Woman + Man 의 정답은?
 
 <pre>
 # python
@@ -153,6 +161,8 @@ print(model_result)
 >>> loaded_model.most_similar(positive=["king","woman"],negative=["man"])[0]
 ('queen', 0.6399722695350647)
 </pre>
+
+<p>
 
 
 

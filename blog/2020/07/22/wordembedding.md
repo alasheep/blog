@@ -11,7 +11,7 @@ cover: ./pexels-photo-169573-1024x683.jpeg
 
 
 
-## King - Man + Woman
+## King - Man + Woman = ?
 
 > 단어간의 관계가 Vector 화 되있다면 풀수 있는 문제 
 
@@ -112,7 +112,7 @@ print('총 샘플의 개수 : {}'.format(len(result)))
 # min_count = 단어 최소 빈도 수 제한 (빈도가 적은 단어들은 학습하지 않는다.)
 # workers = 학습을 위한 프로세스 수
 # sg = 0은 CBOW, 1은 Skip-gram.
-model = Word2Vec(sentences=result, size=100, window=5, min_count=5, workers=4, sg=0)
+model = Word2Vec(sentences=result, size=100, window=5, min_count=5, workers=4, sg=1)
 
 model_result = model.wv.most_similar("man")
 
@@ -135,7 +135,7 @@ print(model_result)
 
 
 
-> King - Woman + Man 의 정답은?
+> ### King - Woman + Man 의 정답은?
 
 <pre>
 # python

@@ -1,6 +1,6 @@
 ---
 slug: word embedding
-title: "Word Embedding"
+title: "AI (Word Embedding)"
 published: true
 date: 2020-07-22T15:00:07-18:00
 tags: Random

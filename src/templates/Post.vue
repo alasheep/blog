@@ -5,9 +5,9 @@
       <small class="about">{{ formatCreatedOn }} • ☕️ {{ $page.post.timeToRead }} min read</small>
       <g-image v-if="$page.post.cover" :src="$page.post.cover" class="cover"/>
       <article v-html="$page.post.content" class="article"/>
-      <convert-kit uid="44cc02ed05" script="https://f.convertkit.com/44cc02ed05/38739557e4.js"></convert-kit>
+      <!--<convert-kit uid="44cc02ed05" script="https://f.convertkit.com/44cc02ed05/38739557e4.js"></convert-kit>-->
     </div>
-    <bulma-tag :tags="$page.post.tags"/>
+    <!--<bulma-tag :tags="$page.post.tags"/>-->
   </Layout>
 </template>
 

@@ -133,6 +133,12 @@ print(model_result)
 
 
 
+## Word2Vec 공간을 consine distance 로 explore 하기
+
+텐서플로우에 포함된 [embedding projector](https://projector.tensorflow.org/) 툴 통한 explore
+
+
+
 
 
 > ### King - Woman + Man 의 정답은?
@@ -144,5 +150,14 @@ print(model_result)
 >>> loaded_model = KeyedVectors.load_word2vec_format("eng_w2v_sgram.bin")
 >>> loaded_model.most_similar(positive=["king","woman"],negative=["man"])
 [('queen', 0.6399722695350647), ('luther', 0.6368300914764404), ('jewish', 0.6324093341827393), ('mahatma', 0.6255710124969482), ('royal', 0.621810793876648), ('republican', 0.6188339591026306), ('agnes', 0.6142123937606812), ('mutilation', 0.6140838861465454), ('charlotte', 0.6131534576416016), ('donnell', 0.6124670505523682)]
+>>> loaded_model.most_similar(positive=["king","woman"],negative=["man"])[0]
+('queen', 0.6399722695350647)
 </pre>
+
+
+
+## Reference
+
+- https://jiho-ml.com/weekly-nlp-4/
+- https://wikidocs.net/50739
 

@@ -15,7 +15,7 @@ cover: ./pexels-photo-169573-1024x683.jpeg
 
 > 단어간의 관계가 Vector 화 되있다면 풀수 있는 문제 
 
-<p>
+![kingmanwoman](./kingmanwoman.png)
 
 ## Word Embedding (word vector)
 
@@ -92,6 +92,7 @@ with zipfile.ZipFile('ted_en-20160408.zip', 'r') as z:
 content_text = re.sub(r'\([^)]*\)', '', parse_text)
 
 # 입력 코퍼스에 대해서 NLTK를 이용하여 문장 토큰화를 수행.
+nltk.download('punkt')
 sent_text=sent_tokenize(content_text)
 
 # 각 문장에 대해서 구두점을 제거하고, 대문자를 소문자로 변환.
@@ -101,7 +102,6 @@ for string in sent_text:
      normalized_text.append(tokens)
 
 # 각 문장에 대해서 NLTK를 이용하여 단어 토큰화를 수행.
-nltk.download('punkt')
 result = [word_tokenize(sentence) for sentence in normalized_text]
 
 print('총 샘플의 개수 : {}'.format(len(result)))
@@ -138,8 +138,6 @@ print(model_result)
 
 
 <p>
-
-## 
 
 ## Word2Vec 공간을 consine distance 로 explore 하기
 

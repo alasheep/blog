@@ -1,22 +1,17 @@
 <template>
   <Layout>
-    <div class="content">
-      <div class="columns is-centered">
-        <div class="column is-two-thirds">
-          <h1 class="title is-2">Have a nice day..</h1>
-          <p></p>
-          <p>안녕하세요. 40대 개발자 입니다..</p>
-          <p>Embedded SW(DTV MICOM, BSP, Device Driver),</p>
-          <p>Mobile Application (Android / iOS) 개발했었고,</p>
-          <p>현재는 Backend(Spring) 서버를 개발하고 있습니다.</p>
-          <p>좋아하는건 책읽기, 여행이고, 최근 관심사는 AI(머신러닝,딥러닝) 입니다.</p>
-          <p>자주 글 올리도록 노력하겠습니다. ^.^</p>
-        </div>
-        <div class="column right-side">
-          <g-image src="../assets/img/andy-avatar.png" class="avatar" alt="Dan Vega Avatar"/>
+      <div class="content">
+        <h1 class="title is-2">개발자의 끄적끄적</h1>
+      <p>
+        개발 및 관심사를 적는곳입니다.
+        <a
+          href="https://twitter.com/alasheep"
+        >Twitter</a>.
+      </p>
+        <div id="recent-posts">
+            <PostCard v-for="edge in $page.recentPosts.edges" :key="edge.node.id" :post="edge.node"/>
         </div>
       </div>
-    </div>
   </Layout>
 </template>
 
@@ -85,3 +80,6 @@ img.cover {
   border-radius: 4px;
 }
 </style>
+
+
+    

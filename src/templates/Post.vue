@@ -32,12 +32,12 @@ query Post ($path: String!) {
 
 <script>
 import moment from "moment";
-import BulmaTag from "@/components/BulmaTag";
+import BlogTag from "@/components/BlogTag";
 import ConvertKit from "@/components/ConvertKit";
 
 export default {
   components: {
-    BulmaTag,
+    BlogTag,
     ConvertKit
   },
   metaInfo() {

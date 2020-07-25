@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 .post-tags {
   margin: 1em 0 0;
 

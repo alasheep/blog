@@ -1,32 +1,7 @@
 <template>
   <Layout>
-    <div class="content">
-      <h1 class="title is-2">Programming</h1>
-      <!-- <p>
-        개발과 관련한 관심사를 정리한 글입니다. 문의사항 있으시면 트위터 계정으로 연락주세요.
-        <a
-          href="https://twitter.com/alasheep"
-        >Twitter</a>.
-      </p> -->
-      <!-- <div class="empty"> -->
-      </div>
-      <div class="articles">
-        <div v-for="post in $page.posts.edges" :key="post.node.id" class="article content">
-          <h2 class="title is-4">
-            <g-link :to="post.node.path">{{post.node.title}}</g-link>
-          </h2>
-          <small>{{ new Date(post.node.date).toLocaleDateString() }} • ☕️ {{post.node.timeToRead}} min read</small>
-          <p v-if="post.node.excerpt">{{post.node.excerpt}}</p>
-        </div>
-      </div>
-    </div>
-    <BulmaPagination
-      baseUrl="/blog"
-      :currentPage="$page.posts.pageInfo.currentPage"
-      :totalPages="$page.posts.pageInfo.totalPages"
-      :maxVisibleButtons="5"
-      v-if="$page.posts.pageInfo.totalPages > 1"
-    />
+    <h1>Recent Articles</h1>
+    <blog-post-list :posts="$page.posts.edges" :page-info="$page.posts.pageInfo" />
   </Layout>
 </template>
 
@@ -60,27 +35,17 @@ query Blog ($page: Int) {
 </page-query>
 
 <script>
-import BulmaPagination from "@/components/BulmaPagination";
-
+import BlogPostList from "@/components/BlogPostList";
 export default {
   components: {
-    BulmaPagination
+    BlogPostList
   }
 };
 </script>
 
-<style>
-.empty {
-  height: 10px;
-}
-.articles {
-  margin: 20px 0;
-}
-.article h2 {
-  margin-bottom: 0px !important;
-}
-.article h2 a:link,
-.article h2 a:visited {
-  color: #ff4e46;
+<style scoped>
+.popular-tags {
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgray;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="title is-1">Diary</h1>
+    <h1 class="title is-1">Life</h1>
     <div class="content">
       <p>개인적인 관심사를 적어내려가는 공간입니다.</p>
       <!-- <ul>

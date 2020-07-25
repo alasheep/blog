@@ -1,10 +1,12 @@
 ---
 slug: blog-making-method
-title: "블로그 개설 후기"
-published: true
+title: 블로그 개설 후기
 date: 2019-04-27T12:00:00.000Z
-tags: Random
-excerpt: "블로그를 만들었습니다. 뭔가 동기 부여가 필요하던 차에 회사 교육을 받던 중 갑자기 Feel 이 와서 하루 투자해서 만들었네요."
+published: true
+excerpt: 블로그를 만들었습니다. 뭔가 동기 부여가 필요하던 차에 회사 교육을 받던 중 갑자기 Feel 이 와서 하루 투자해서 만들었네요.
+author: Andy
+tags: 
+ - blog
 cover: ./pexels-photo-169573-1024x683.jpeg
 ---
 

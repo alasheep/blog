@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 .post-meta {
   font-size: .8em;
   opacity: .8;

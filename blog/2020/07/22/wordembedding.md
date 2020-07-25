@@ -2,7 +2,7 @@
 slug: word embedding
 title: "AI (Word Embedding)"
 published: true
-date: 2020-07-22T15:00:07-18:00
+date: 2020-07-22T12:00:00.000Z
 tags: Random
 excerpt: "word embedding"
 cover: ./pexels-photo-169573-1024x683.jpeg

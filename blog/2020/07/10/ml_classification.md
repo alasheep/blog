@@ -2,7 +2,7 @@
 slug: ml_classification
 title: "AI (머신러닝 분류)"
 published: true
-date: 2020-07-10T21:00
+date: 2020-07-10T12:00:00.000Z
 tags: Random
 excerpt: "BOW 와 TF-IDF"
 cover: ./bow_tfidf_cover1.jpeg

@@ -5,12 +5,9 @@
         <div class="column is-two-thirds">
           <h1 class="title is-2">Have a nice day..</h1>
           <p></p>
-          <p>안녕하세요. 40대 개발자 입니다..</p>
-          <p>Embedded SW(DTV MICOM, BSP, Device Driver),</p>
-          <p>Mobile Application (Android / iOS) 개발했었고,</p>
-          <p>현재는 Backend(Spring) 서버를 개발하고 있습니다.</p>
+          <p>안녕하세요. Backend(Spring) 서버를 개발하고 있는 Andy 입니다.</p>
           <p>좋아하는건 책읽기, 여행이고, 최근 관심사는 AI(머신러닝,딥러닝) 입니다.</p>
-          <p>자주 글 올리도록 노력하겠습니다. ^.^</p>
+          <p>좋은 하루 되세요~!!!</p>
         </div>
         <div class="column right-side">
           <g-image src="../assets/img/andy-avatar.png" class="avatar" alt="Dan Vega Avatar"/>

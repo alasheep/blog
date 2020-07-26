@@ -3,11 +3,10 @@ slug: blog-making-method
 title: 블로그 개설 후기
 date: 2019-04-27T12:00:00.000Z
 published: true
-excerpt: 블로그를 만들었습니다. 뭔가 동기 부여가 필요하던 차에 회사 교육을 받던 중 갑자기 Feel 이 와서 하루 투자해서 만들었네요.
+excerpt: 블로그를 만들었습니다. Vue.js 와 gridsome 사용한 Markdown 보여주는 정적 블로그 입니다.
 author: Andy
 tags: 
  - blog
-cover: ./pexels-photo-169573-1024x683.jpeg
 ---
 
 블로그를 만들었습니다.

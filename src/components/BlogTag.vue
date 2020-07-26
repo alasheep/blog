@@ -20,7 +20,7 @@ export default {
   margin: 40px 0;
 }
 .tags a {
-  background-color: var(--bright-blue);
+  background-color: var(--theme-color);
   padding: 10px;
   color: white;
   text-decoration: none;

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Recent Articles</h1>
+    <h1 id="title">[ Blog 저장소 ]</h1>
     <blog-post-list :posts="$page.posts.edges" :page-info="$page.posts.pageInfo" />
   </Layout>
 </template>
@@ -47,5 +47,8 @@ export default {
 .popular-tags {
   padding-bottom: 5px;
   border-bottom: 1px solid lightgray;
+}
+#title {
+  color: var(--title-color)
 }
 </style>

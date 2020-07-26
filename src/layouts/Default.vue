@@ -54,6 +54,7 @@ query {
   --font-color-inverse: #ebf1fc;
   --mobile-menu-background: #efefef;
   --mobile-menu-link-color: #0f2342;
+  --title-color: #7ab362;
 }
 html {
   box-sizing: border-box;

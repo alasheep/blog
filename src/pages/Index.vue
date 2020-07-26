@@ -33,15 +33,15 @@
     -->
     <section id="latest-articles">
       <div class="container">
-        <h2>Latest Articles</h2>
+        <h1 id="title">Latest Articles</h1>
         <div id="post-cards">
           <div
             class="post-card"
             v-for="post in $page.recentPosts.edges"
             :key="post.node.id"
           >
+            <!--
             <div>
-              <!--
               <g-link :to="post.node.path" :aria-label="post.node.title">
                 <g-image
                   :src="post.node.cover.src"
@@ -49,8 +49,8 @@
                   loading="lazy"
                 />
               </g-link>
-              -->
             </div>
+            -->
             <g-link :to="post.node.path" :aria-label="post.node.title">
               <h3>{{ post.node.title }}</h3>
               <p>{{ post.node.excerpt }}</p>
@@ -163,6 +163,9 @@ h1 span {
   margin-top: -10px;
   font-family: "Handlee", cursive;
 }
+#title {
+  color: var(--title-color)
+}
 .wave-container {
   position: relative;
   background: var(--home-header-background);
@@ -235,7 +238,7 @@ section p {
   margin-bottom: 1.2rem;
 }
 /* Latest Articles */
-#latest-articles h2 {
+#latest-articles h1 {
   margin-top: 20px;
 }
 #post-cards {

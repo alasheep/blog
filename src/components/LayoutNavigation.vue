@@ -7,7 +7,7 @@
         <g-link to="/" exact>Home</g-link>
       </li>
       <li>
-        <g-link to="/blog" exact>IT</g-link>
+        <g-link to="/blog" exact>Blog</g-link>
       </li>
       <li>
         <g-link to="/life" exact>Life</g-link>

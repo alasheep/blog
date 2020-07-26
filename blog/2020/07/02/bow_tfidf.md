@@ -3,7 +3,8 @@ slug: bow-tfidf
 title: AI - "bow&tf-idf"
 published: true
 date: 2020-07-10T12:00:00.000Z
-tags: Random
+tags:
+ - blog
 excerpt: "BOW (Bag-of-words), 단어는 어떻게 숫자로 표현될 수 있나?"
 cover: ./404.png
 ---

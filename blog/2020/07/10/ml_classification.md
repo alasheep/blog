@@ -3,7 +3,8 @@ slug: ml_classification
 title: AI - "머신러닝 종류 및 알고리즘"
 published: true
 date: 2020-07-02T12:00:00.000Z
-tags: Random
+tags:
+ - blog
 excerpt: 지도학습, 비지도학습, 강화학습 분류에 따른 머신러닝 알고리즘 분류
 cover: ./404.png
 

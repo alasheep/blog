@@ -7,6 +7,7 @@ excerpt: 블로그를 만들었습니다. Vue.js 와 gridsome 사용한 Markdown
 author: Andy
 tags: 
  - blog
+cover: ./404.png
 ---
 
 블로그를 만들었습니다.

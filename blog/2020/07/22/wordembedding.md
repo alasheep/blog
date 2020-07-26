@@ -5,6 +5,7 @@ published: true
 date: 2020-07-22T12:00:00.000Z
 tags: Random
 excerpt: King - Man + Woman 의 정답은?
+cover: ./404.png
 
 ---
 

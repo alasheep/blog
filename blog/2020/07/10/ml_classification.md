@@ -5,6 +5,7 @@ published: true
 date: 2020-07-02T12:00:00.000Z
 tags: Random
 excerpt: 지도학습, 비지도학습, 강화학습 분류에 따른 머신러닝 알고리즘 분류
+cover: ./404.png
 
 ---
 

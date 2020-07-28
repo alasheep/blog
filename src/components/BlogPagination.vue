@@ -109,7 +109,7 @@ nav a:visited {
   list-style-type: none;
 }
 .is-current {
-  background-color: var(--theme-color);
+  background-color: var(--theme-hover-color);
   border-color: var(--theme-color);
   color: white !important;
 }

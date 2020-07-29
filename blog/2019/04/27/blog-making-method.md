@@ -30,7 +30,7 @@ cover: ./404.png
 
 참고사이트 (https://github.com/danvega/danvega-dev) 통해 git clone
 
-```
+```shell
 git clone https://github.com/danvega/danvega-dev.git
 ```
 
@@ -39,21 +39,19 @@ Gridsome 빌드
 Gridsome 은 Vue.js 기반의 site generator 입니다.
 참고 소스는 Gridsome 으로 작성된 Vue.js 소스로 빌드 방식은 다음과 같습니다.
 
-```
+```shell
 npm install --global @gridsome/cli
-```
-
-```
 npm install
 ```
 
-```
+```shell
+gridsome build
 gridsome develop
 ```
 
 로컬 브라우저에서 확인
 
-```
+```shell
 http://localhost:8080
 ```
 
@@ -63,7 +61,7 @@ http://localhost:8080
 
 앞으로 소스를 손보면서 발전시켜 나갈 예정이라 github 올립니다.
 
-```
+```shell
 git init</br>
 git add .</br>
 git commit -m "first blog code by vue.js"</br>
@@ -82,7 +80,7 @@ Netlify 배포 및 호스팅 방법 : https://heropy.blog/2018/01/10/netlify/
 
 위 처럼 배포를 하니, 다음 사이트 주소를 사용할 수 있었습니다. (와, 브라우저에서 보임 ^^)
 
-```
+```shell
 admiring-sammet-8c523b.netlify.com
 ```
 
@@ -91,6 +89,7 @@ admiring-sammet-8c523b.netlify.com
 ## 개인 도메인과 연결
 
 좀더 욕심을 부려, 개인 도메인 (alasheep.com) 구매해서 연결했네요.
+
 [GoDaddy](https://kr.godaddy.com) 에서 1년에 1만원 밖에 하지 않습니다. ㅎㅎ
 
 주의사항은 Netlify 의 네임서버 주소를 GoDaddy 에서 구매한 도메인 설정의 네임서버에 등록 하여야 합니다.

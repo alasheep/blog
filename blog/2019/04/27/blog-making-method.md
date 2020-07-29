@@ -62,9 +62,9 @@ http://localhost:8080
 앞으로 소스를 손보면서 발전시켜 나갈 예정이라 github 올립니다.
 
 ```shell
-git init</br>
-git add .</br>
-git commit -m "first blog code by vue.js"</br>
+git init
+git add .
+git commit -m "first blog code by vue.js"
 git remote add origin http://github.com/alasheep/blog.git
 ```
 

@@ -1,6 +1,6 @@
 <template>
   <div class="articles">
-    <div v-for="post in posts" v-if="post.node.tags[0].title==='blog'" :key="post.node.id" class="article">
+    <div v-for="post in posts" v-if="post.node.tags[0].title==='life'" :key="post.node.id" class="article">
       <h2>
         <g-link :to="post.node.path">{{ post.node.title }}</g-link>
       </h2>
@@ -11,8 +11,8 @@
       <p v-if="post.node.excerpt">{{ post.node.excerpt }}</p>
     </div>
     <div class="pagingation">
-      <BlogPagination
-        baseUrl="/blog"
+      <LifePagination
+        baseUrl="/life"
         :currentPage="pageInfo.currentPage"
         :totalPages="pageInfo.totalPages"
         :maxVisibleButtons="5"
@@ -23,10 +23,10 @@
 </template>
 
 <script>
-import BlogPagination from "@/components/BlogPagination";
+import LifePagination from "@/components/LifePagination";
 export default {
   components: {
-    BlogPagination
+    LifePagination
   },
   props: ["posts", "pageInfo"]
 };
@@ -39,7 +39,7 @@ export default {
 }
 .article h2 a:link,
 .article h2 a:visited {
-  color: var(--article-title-blue);
+  color: var(--article-title-pink);
   text-decoration: none;
 }
 .article p {

@@ -55,6 +55,8 @@ query {
   --mobile-menu-background: #efefef;
   --mobile-menu-link-color: #0f2342;
   --title-color: #7ab362;
+  --article-title-blue: #3273dc;
+  --article-title-pink: #f253d5;
 }
 html {
   box-sizing: border-box;

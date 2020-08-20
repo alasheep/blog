@@ -36,9 +36,11 @@ query Tag($id: ID!) {
 
 <script>
 import BlogPostList from "@/components/BlogPostList";
+import LifePostList from "@/components/LifePostList";
 export default {
   components: {
-    BlogPostList
+    BlogPostList,
+    LifePostList
   }
 };
 </script>

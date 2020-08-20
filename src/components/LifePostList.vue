@@ -11,7 +11,7 @@
       <p v-if="post.node.excerpt">{{ post.node.excerpt }}</p>
     </div>
     <div class="pagingation">
-      <LifePagination
+      <BlogPagination
         baseUrl="/life"
         :currentPage="pageInfo.currentPage"
         :totalPages="pageInfo.totalPages"
@@ -23,10 +23,10 @@
 </template>
 
 <script>
-import LifePagination from "@/components/LifePagination";
+import BlogPagination from "@/components/BlogPagination";
 export default {
   components: {
-    LifePagination
+    BlogPagination
   },
   props: ["posts", "pageInfo"]
 };

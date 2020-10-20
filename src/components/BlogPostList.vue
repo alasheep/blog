@@ -1,6 +1,6 @@
 <template>
   <div class="articles">
-    <div v-for="post in posts"  v-if="post.node.tags[0].title==='blog'" :key="post.node.id" class="article">
+    <div v-for="post in posts" :key="post.node.id" class="article">
       <h2>
         <g-link :to="post.node.path">{{ post.node.title }}</g-link>
       </h2>

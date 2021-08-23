@@ -1,6 +1,6 @@
 ---
 slug: JPA&QueryDsl
-title: Backend - "JPA&QueryDsl"
+title: Backend - "JPA(Java Persistant Api)"
 published: true
 date: 2021-07-20T11:00:00.000Z
 tags:
@@ -84,7 +84,3 @@ cover: ./404.png
 ```
 
 
-
-## 연관관계 맵핑
-
-> 수정시는 가급적 dirty checking 으로 DB 업데이트 하라 !!

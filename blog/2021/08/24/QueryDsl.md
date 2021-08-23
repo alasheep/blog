@@ -14,7 +14,7 @@ cover: ./404.png
 ## 쿼리 작성방법
 
 > 1. JPQL
-> 2. JPARepsitory
+> 2. JpaRepsitory 인터페이스
 > 3. Specification
 > 4. QueryDSL
 
@@ -60,9 +60,21 @@ List<Member> members = queryFactory.select(qMember)
 
 
 
+## JPA 내에 QueryDSL 녹이기 
+
+> 기존에 사용하는 JPA 코드에 QueryDSL 적용하기
+
+#### 1. XXXRepositoryCustem 인터페이스 작성 및 구현 클래스 작성
+
+- queryDSL 로 작성된 함수
+
+#### 2. 사용중인 JpaReository 에 XXXRepositoryCustom 인터페이스 구현
+
+
+
 ## QueryDSL 성능개선
 
-> QueryDSL 라이브러리가 제공하는 Q클래스 인스턴스로 QueryDSL 문법에 맞게 동적 쿼리 작성
+> 성능개선 내용
 
 #### 1. Entity 조회 대신 Dto 조회
 

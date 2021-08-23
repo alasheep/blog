@@ -70,7 +70,11 @@ List<Member> members = queryFactory.select(qMember)
 
 #### 2. 사용중인 JpaReository 에 XXXRepositoryCustom 인터페이스 구현
 
+- 즉, MemberRepository 는 JpaRepository 도 상속받고, XXXRepositoryCustom 도 상속받아
 
+  JPA 와 QueryDSL 모두를 memberRepsitory 통해 사용가능
+
+  
 
 ## QueryDSL 성능개선
 

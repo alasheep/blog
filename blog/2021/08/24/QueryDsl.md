@@ -11,11 +11,12 @@ cover: ./404.png
 
 
 
-## 동적 쿼리 작성방법
+## 쿼리 작성방법
 
-> 1. Specification
->
-> 2. QueryDSL
+> 1. JPQL
+> 2. JPARepsitory
+> 3. Specification
+> 4. QueryDSL
 
 
 
@@ -40,23 +41,6 @@ cover: ./404.png
 
 > QueryDSL 라이브러리가 제공하는 Q클래스 인스턴스로 QueryDSL 문법에 맞게 동적 쿼리 작성
 
-(예제) Member 테이블에서 이름이 "홍길동"인 항목 조회
-
-```java
-QMember qMember = QMember.member;
-
-List<Member> members = queryFactory.select(qMember)
-                 .from(qMember)
-                 .where(qMember.name.eq("홍길동"))
-                 .fetch();
-```
-
-
-
-## QueryDSL 사용방법
-
-> QueryDSL 라이브러리가 제공하는 Q클래스 인스턴스로 QueryDSL 문법에 맞게 동적 쿼리 작성
-
 #### 1. QueryFactory 빈 생성
 
 #### 2. Q클래스 생성 : maven or gradle 빌드
@@ -70,7 +54,45 @@ QMember qMember = QMember.member;
 
 List<Member> members = queryFactory.select(qMember)
                  .from(qMember)
-                 .where(qMember.name.eq("홍길동"))
+                 .where(qMember.username.eq("홍길동"))
                  .fetch();
 ```
+
+
+
+## QueryDSL 성능개선
+
+> QueryDSL 라이브러리가 제공하는 Q클래스 인스턴스로 QueryDSL 문법에 맞게 동적 쿼리 작성
+
+#### 1. Entity 조회 대신 Dto 조회
+
+(예제) Member 테이블에서 이름이 "홍길동"인 항목 조회
+
+```java
+QMember qMember = QMember.member;
+
+List<Member> members = queryFactory.select
+                        (Projections.fields(MemberDto.class, memebr.username))
+                 .from(qMember)
+                 .where(qMember.username.eq("홍길동"))
+                 .fetch();
+```
+
+
+
+#### 2. 패티 조인과 페이징 동시사용시 Memeory Leak 이슈
+
+- 현상 : 발생하는 db 쿼리에 limit 없이 쿼리 발생하나, 다음의 에러가 보이면서 페이징 결과는 정상리턴
+- 에러 : firstResult/maxResults specified with collection fetch; applying in memory
+
+- 원인 : 전체 조회를 해서 메모리에 올리고, 그중 페이징에 해당하는 결과만 리턴하여 결과 조회는 이상없어 보이나 잠재적인 메모리 Leak 문제를 가지고 있음
+- 대책 : 확인중
+
+
+
+## 로그팁
+
+> QueryDSL 은 JPQL 빌더이기 때문에 db 쿼리 말고도, JPQL 쿼리도 확인 필요함
+>
+> hibernate.use_sql_comments=true
 
